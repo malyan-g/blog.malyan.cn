@@ -1,0 +1,27 @@
+{
+    "name": "tangniyuqi/yii2-emoji",
+    "version": "1.0.0",
+    "description": "The emoji extension for the Yii framework",
+    "keywords": ["yii2", "extension", "emoji"],
+    "homepage": "https://github.com/tangniyuqi/yii2-emoji",
+    "type": "yii2-extension",
+    "language": "php",
+    "license": "BSD 3-Clause",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "tangniyuqi",
+            "email": "tangniyuqi@163.com",
+            "homepage": "http://www.noooya.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "tangniyuqi\\emoji\\": ""
+        }
+    }
+}
