@@ -79,7 +79,7 @@ $user = Yii::$app->user->identity;
     <!-- 内容 -->
     <div class="container">
         <div>
-            <marquee behavior="scroll" direction="" style="background: #ffffff; color: red">
+            <marquee behavior="scroll" direction="" style="background: #ffffff; color: red;line-height: ">
                 <p>本站点带宽为1M，所以加载比较慢！</p>
             </marquee>
         </div>
