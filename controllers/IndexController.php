@@ -31,8 +31,6 @@ class IndexController extends Controller
      */
     public function actionIndex()
     {
-
-        var_dump(HttpClientHelper::request('http://passport.malyan.cn/user.html'));die;
         $query = Article::find()
             ->innerJoinWith([
                 'category' => function(ActiveQuery $query){
