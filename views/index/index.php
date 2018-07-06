@@ -73,7 +73,7 @@ $this->title = '青春也迷茫';
         <div class="panel panel-default" style="background: url(https://image.malyan.cn/blog/user-bg.jpg) #fff; background-size:100% 120px; background-repeat:no-repeat;">
             <div class="panel-body">
                 <div class="user">
-                    <img class="avatar" src="https://image.malyan.cn/blog/user.jpg" alt="wkf928592">
+                    <img class="avatar" src="http://image.malyan.cn/blog/user.jpg" alt="wkf928592">
                     <h1>Malyan</h1>
                 </div>
             </div>
@@ -108,7 +108,7 @@ $this->title = '青春也迷茫';
             </div>
             <div class="panel-body">
                 <a href="javascript:;" title="友情资助">
-                    <img class="fund" src="https://image.malyan.cn/blog/wechat_pay_code.jpg" alt="友情资助" >
+                    <img class="fund" src="http://image.malyan.cn/blog/wechat_pay_code.jpg" alt="友情资助" >
                 </a>
             </div>
         </div>
