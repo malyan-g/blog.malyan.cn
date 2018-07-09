@@ -275,12 +275,6 @@ class IndexController extends Controller
      */
     public function actionDonate()
     {
-        //RedisHelper::getInstance()->set('test', 1);
-        //Yii::$app->redis->mset('test', 2);
-        $redis = new \Redis();
-        $redis->connect('127.0.0.1', 6379);
-        $redis->set('test', 1);
-        $redis->mset(['test' => 2]);
         return $this->render('donate');
     }
 
