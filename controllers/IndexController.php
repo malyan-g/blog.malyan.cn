@@ -90,6 +90,7 @@ class IndexController extends Controller
      */
     public function actionChat()
     {
+        $this->layout = false;
         if(Yii::$app->user->isGuest){
             return $this->redirect('http://passport.malyan.cn');
         }
