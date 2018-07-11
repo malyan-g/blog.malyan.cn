@@ -63,7 +63,7 @@ class IndexController extends Controller
      */
     public function actionPicture()
     {
-        return $this->render('index');
+        return $this->render('picture');
     }
 
     /**
@@ -72,7 +72,7 @@ class IndexController extends Controller
      */
     public function actionMusic()
     {
-        return $this->render('index');
+        return $this->render('music');
     }
 
     /**
@@ -81,7 +81,7 @@ class IndexController extends Controller
      */
     public function actionVideo()
     {
-        return $this->render('index');
+        return $this->render('video');
     }
 
     /**
@@ -92,7 +92,7 @@ class IndexController extends Controller
     {
         $this->layout = false;
         if(Yii::$app->user->isGuest){
-            return $this->redirect('http://passport.malyan.cn');
+            return $this->redirect(PASSPORT_URL);
         }
 
         return $this->render('chat', [

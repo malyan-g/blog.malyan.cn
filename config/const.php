@@ -6,6 +6,7 @@
  * Time: 上午10:09
  */
 
+define('PASSPORT_URL', 'http://passport.malyan.cn');
 define('BLOG_URL', 'http://blog.malyan.cn');
 define('TOKEN_EXPIRE', 1800);
 define('LOGIN_EXPIRE', 1800);
