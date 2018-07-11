@@ -7,12 +7,12 @@
  */
 
 use yii\helpers\Html;
-use app\assets\AppAsset;
+use app\assets\ChatAsset;
 
 /* @var $this \yii\web\View */
 /* @var $nickname string */
 
-AppAsset::register($this);
+ChatAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
