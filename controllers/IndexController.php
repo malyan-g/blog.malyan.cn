@@ -92,11 +92,18 @@ class IndexController extends Controller
     {
         $this->layout = false;
         if(Yii::$app->user->isGuest){
-            return $this->redirect(PASSPORT_URL);
-        }
+            if(Yii::$app->session->has('chat.nickname')){
+                $nickname = Yii::$app->session->get('chat.nickname');
+            }else{
+                $nickname =  '游客' . uniqid();
+                Yii::$app->session->set('chat.nickname', $nickname);
+            }
 
+        }else{
+            $nickname = Yii::$app->user->identity->nickname;
+        }
         return $this->render('chat', [
-            'nickname' => Yii::$app->user->identity->nickname
+            'nickname' => $nickname
         ]);
     }
 
