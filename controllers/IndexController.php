@@ -90,7 +90,8 @@ class IndexController extends Controller
             if(Yii::$app->session->has('chat.nickname')){
                 $nickname = Yii::$app->session->get('chat.nickname');
             }else{
-                Yii::$app->session->set('chat.nickname', User::getNickname());
+                $nickname = User::getNickname();
+                Yii::$app->session->set('chat.nickname', $nickname);
             }
         }else{
             $nickname = Yii::$app->user->identity->nickname;
