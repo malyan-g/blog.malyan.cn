@@ -334,10 +334,10 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $key = array_rand(self::$nicknameData, 1);
         $redisHelper = RedisHelper::getInstance();
-        if($redisHelper->sIsMembers(self::CHAT_NICKNAME , $key)){
+        if($redisHelper->exists(self::CHAT_NICKNAME . $key)){
             return self::getNickname();
         }else{
-            $redisHelper->sAdd(self::CHAT_NICKNAME , $key);
+            $redisHelper->set(self::CHAT_NICKNAME . $key, 1)->expire(600);
             return self::$nicknameData[$key];
         }
     }
