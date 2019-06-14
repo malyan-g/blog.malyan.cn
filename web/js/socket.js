@@ -27,7 +27,7 @@ var socket = {
     createWebSocket: function () {
         try{
             if('WebSocket' in window){
-                this.ws = new WebSocket('ws:' + this.url);
+                this.ws = new WebSocket('wss:' + this.url);
                 this.initEventHandle();
             }else{
                 this.log("您的浏览器不支持webSocket!");
