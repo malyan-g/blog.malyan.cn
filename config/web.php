@@ -43,7 +43,7 @@ $config = [
     ],
     'params' => require(__DIR__ . '/params.php'),
     'aliases' => [
-        '@staticHost' => 'http://static.malyan.cn',
+        '@staticHost' => 'https://static.malyan.cn',
     ],
 ];
 
