@@ -8,16 +8,11 @@
 
 namespace app\controllers;
 
-use app\components\helpers\RedisHelper;
-use app\models\Banner;
 use Yii;
-use app\models\Link;
+use app\models\User;
 use app\models\Article;
 use yii\db\ActiveQuery;
-use app\controllers\Controller;
 use yii\data\ActiveDataProvider;
-use app\components\helpers\HttpClientHelper;
-use yii\web\Response;
 
 /**
  * Class IndexController
@@ -95,10 +90,8 @@ class IndexController extends Controller
             if(Yii::$app->session->has('chat.nickname')){
                 $nickname = Yii::$app->session->get('chat.nickname');
             }else{
-                $nickname =  '游客' . uniqid();
-                Yii::$app->session->set('chat.nickname', $nickname);
+                Yii::$app->session->set('chat.nickname', User::getNickname());
             }
-
         }else{
             $nickname = Yii::$app->user->identity->nickname;
         }
