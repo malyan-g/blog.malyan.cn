@@ -17,8 +17,12 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'identityCookie' => ['name' => '_identity-passport', 'httpOnly' => true],
-            'enableAutoLogin' => true,
+            'identityCookie' => ['domain' => DOMAIN, 'name' => '_identity-passport', 'httpOnly' => true],
+            'enableAutoLogin' => true
+        ],
+        'session' => [
+            'cookieParams' => ['domain' => DOMAIN, 'lifetime' => 0],
+            'timeout' => 3600,
         ],
         // 错误配置
         'errorHandler' => [

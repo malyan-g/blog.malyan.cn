@@ -14,3 +14,4 @@ define('API_KEY', '12345678');
 define('SC_SECRET_KEY', 'VZXptdtHFs/k+I2Cfrj1+5kuO7r3ppAI');
 define('API_CODE_ERROR', 0);
 define('API_CODE_SUCCESS', 1);
+define('DOMAIN', '.malyan.cn');
